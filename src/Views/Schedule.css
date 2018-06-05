@@ -1,0 +1,79 @@
+.app-schedule {
+    background: url("../Images/background.png") no-repeat no-repeat;
+    background-position-x: center;
+}
+
+.schedule-container {
+    width: 100%;
+    padding-top: 55px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.schedule-content {
+    text-align: left;
+    color: #fefefe;
+    width: 90%;
+    height: 90%;
+    margin: auto auto auto 3%;
+    border: 2px solid #0a0b0c;
+    background: linear-gradient(to bottom,
+    rgba(2, 13, 46, 0.54), rgba(104, 186, 244, 0.54),
+    rgba(2, 13, 46, 0.54));
+    z-index: 1;
+    letter-spacing: 0.05em;
+}
+
+@media (min-width: 1280px) {
+    .schedule-content {
+        width: 60%;
+    }
+}
+
+.schedule-table tr {
+    line-height: 2em;
+}
+
+.schedule-table td {
+    padding: 0 0.3rem;
+}
+
+.schedule-table td:nth-child(1) {
+    width: 4.7rem;
+    text-align: justify;
+    text-align-last: justify;
+}
+
+.schedule-button-place > a {
+    display: block;
+    font-size: 1.3rem;
+    width: 100%;
+    background: #2d5175;
+    color: #fefefe;
+    padding: 0.3rem 5rem;
+    text-align: justify;
+    text-align-last: justify;
+    line-height: 1.5rem;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.schedule-list > li {
+    margin-bottom: 0.5rem;
+}
+
+.schedule-characters {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: url("../Images/background-schedule.png") no-repeat;
+    background-size: auto 100%;
+    background-position-x: calc(100% + 4rem);
+    z-index: 2;
+}

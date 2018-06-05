@@ -1,0 +1,97 @@
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-title {
+    margin: 1rem 2rem;
+    font-size: 2rem;
+    color: #fefefe;
+    flex: 0 1 auto;
+}
+
+.content-title-left {
+    text-align: left;
+}
+
+.content-title-right {
+    text-align: right;
+}
+
+.content-header {
+    font-size: 1.4rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: solid 1px;
+    border-radius: 2.5rem;
+    text-align: center;
+    line-height: 1.3rem;
+    letter-spacing: -0.1rem;
+    font-weight: bold;
+    color: #0d0e0f;
+    background: #fefefe;
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.content-header > div {
+    width: 2.6rem;
+    height: 2.6rem;
+    margin: auto;
+}
+
+.content-container {
+    flex: 1 1 auto;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+}
+
+.content-scrollbar {
+    width: 6.25rem;
+    padding: 3rem 2.375rem;
+    box-sizing: border-box;
+}
+
+.content-scrollbar-track {
+    position: relative;
+    height: 100%;
+    width: 1.5rem;
+}
+
+.content-scrollbar-track-background {
+    border-radius: 0.25rem;
+    width: 0.25rem;
+    margin: auto;
+    background: #fefefe;
+    height: 100%;
+}
+
+.content-scrollbar-thumb {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 1.5rem;
+    background: #fefefe;
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 400px) {
+    .content-scrollbar {
+        width: 3.25rem;
+        padding: 3rem 0.875rem;
+    }
+}
+
+.content-content {
+    height: 100%;
+    overflow-y: scroll;
+    margin-right: -50px;
+    padding-right: 50px;
+    font-size: 1.5rem;
+    flex: 1 1 auto;
+}
+
+.content-content h2 {
+    font-size: 1.8rem;
+}

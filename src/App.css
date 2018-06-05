@@ -1,0 +1,53 @@
+.App {
+    background: #000000;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.App-logo {
+    height: 50px;
+}
+
+.App-header {
+    position: absolute;
+    display: flex;
+    margin-left: 10%;
+    width: 80%;
+    height: 55px;
+    color: white;
+    background: linear-gradient(to right,
+    rgba(34, 34, 34, 0), rgba(34, 34, 34, 0.9),
+    rgba(34, 34, 34, 1), rgba(34, 34, 34, 1), rgba(34, 34, 34, 1),
+    rgba(34, 34, 34, 0.9), rgba(34, 34, 34, 0));
+}
+
+.App-header > a {
+    margin: auto;
+}
+
+.App-title {
+    font-size: 1.5em;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+.App-background-landscape {
+    background-size: 100% auto !important;
+}
+
+.App-background-portrait {
+    background-size: auto 100% !important;
+}
+
+.background-characters {
+    display: none;
+}
+
+@media (min-width: 1280px) {
+    .background-characters {
+        display: block;
+    }
+}
