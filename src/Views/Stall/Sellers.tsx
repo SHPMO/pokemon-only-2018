@@ -14,6 +14,7 @@ class Sellers extends Component<{ onUpdate: () => any }, { sellers: any }> {
   }
 
   public componentDidMount() {
+    document.title = '摊位一览 - 现场摊位 - 彩虹火箭队基地'
     API.getSellers(false, sellers => {
       this.setState({
         sellers

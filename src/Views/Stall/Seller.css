@@ -1,11 +1,12 @@
 .seller-content {
     width: 100%;
+    white-space: pre-line;
 }
 
 .seller-detail {
     width: 100%;
     display: flex;
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
 }
 
 .seller-detail-left {
@@ -16,27 +17,27 @@
 .seller-detail-right {
     width: 50%;
     margin: 0 auto;
-    padding-right: 16px;
-    white-space: pre-line;
+    padding-right: 1rem;
 }
 
 .seller-cover {
     display: block;
-    padding-top: calc(100% - 4px);
+    padding-top: 100%;
     margin: auto;
     background: no-repeat center;
     background-size: contain;
-    border: solid #fefefe 2px;
+    border: solid #2d5175 2px;
+    box-sizing: border-box;
 }
 
 .seller-number {
     text-align: center;
-    margin-top: 5px;
-    height: 1em;
+    margin-top: 0.4rem;
+    height: 1.5rem;
 }
 
-.seller-title {
-    font-size: 1.5em;
+.seller-detail-title {
+    font-size: 2.5rem;
 }
 
 @media (max-width: 1016px) {

@@ -1,14 +1,16 @@
 import * as React from 'react'
 import {Component} from 'react'
-// import {Route, Switch} from 'react-router'
-// import {Link} from 'react-router-dom'
+import {Route, Switch} from 'react-router'
+import {Link} from 'react-router-dom'
 
 import Content from '../../Components/Content'
 
 import Utils from '../../lib/Utils'
-// import Items from './Items'
-// import SellerView from './Seller'
-// import Sellers from './Sellers'
+import ItemView from './Item'
+import Items from './Items'
+import Register from './Register'
+import SellerView from './Seller'
+import Sellers from './Sellers'
 
 import './Stall.css'
 
@@ -42,16 +44,18 @@ class Stall extends Component {
     return (<div className="stall-container">
       <Content className="stall-content" contentClassName="stall-content-content" onLeft={false}
                contentTitle={<span>现场<br/><strong>摊位</strong></span>} parent={this}>
-        {/*<div className="stall-navs">*/}
-          {/*<Link to="/stall">摊位一览</Link>*/}
-          {/*<Link to="/stall/items">商品一览</Link>*/}
-        {/*</div>*/}
-        {/*<Switch>*/}
-          {/*<Route exact={true} path="/stall" name="Sellers" render={this.withUpdate(Sellers)}/>*/}
-          {/*<Route exact={true} path="/stall/items" name="Items" render={this.withUpdate(Items)}/>*/}
-          {/*<Route exact={true} path="/stall/:sellerId" name="Seller" render={this.withUpdate(SellerView)}/>*/}
-        {/*</Switch>*/}
-        <h1>敬请期待</h1>
+        <div className="stall-navs">
+          <Link to="/stall">摊位一览</Link>
+          <Link to="/stall/items">商品一览</Link>
+          <Link to="/stall/register">摊位申请</Link>
+        </div>
+        <Switch>
+          <Route exact={true} path="/stall" name="Sellers" render={this.withUpdate(Sellers)}/>
+          <Route exact={true} path="/stall/register" name="Register" component={Register}/>
+          <Route exact={true} path="/stall/items" name="Items" render={this.withUpdate(Items)}/>
+          <Route exact={true} path="/stall/items/:itemId" name="Item" render={this.withUpdate(ItemView)}/>
+          <Route exact={true} path="/stall/:sellerId" name="Seller" render={this.withUpdate(SellerView)}/>
+        </Switch>
       </Content>
       <div className="background-characters stall-characters"/>
       <div className="background-characters stall-characters-2"/>

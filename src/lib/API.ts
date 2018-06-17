@@ -1,3 +1,5 @@
+import * as Cookies from 'es-cookie'
+
 import Cache from './Cache'
 
 class API {
@@ -69,13 +71,64 @@ class API {
     }, errorCallback)
   }
 
+  public static register(name: string, email: string, password: string,
+                         callback: (message: string) => any) {
+    // tslint:disable-next-line:no-console
+    const req = new XMLHttpRequest()
+    req.open('GET', 'https://www.getdaze.org/stall/api/test/?pmo=pmo2018')
+    req.onreadystatechange = () => {
+      if (req.readyState === XMLHttpRequest.DONE) {
+        if (req.status === 200) {
+          const csrfToken = Cookies.get('csrftoken')
+          if (!csrfToken) {
+            callback('注册失败')
+            return
+          }
+          const req2 = new XMLHttpRequest()
+          req2.open('POST', 'https://www.getdaze.org/stall/signup/')
+          const formdata = new FormData()
+          formdata.set('circle_name', name)
+          formdata.set('csrfmiddlewaretoken', csrfToken)
+          formdata.set('email', email)
+          formdata.set('password', password)
+          formdata.set('pmo', 'pmo2018')
+          formdata.set('repassword', password)
+          formdata.set('type', 'stall')
+          req2.setRequestHeader('X-CSRFToken', csrfToken)
+          req2.onreadystatechange = () => {
+            if (req2.readyState === XMLHttpRequest.DONE) {
+              if (req2.status === 200) {
+                const res = JSON.parse(req2.responseText)
+                if (res.error !== 0) {
+                  callback('注册失败！' + (
+                    res.error !== 1 ? res.message :
+                      'email' in res.message ? '请输入正确的 Email' :
+                        'password' in res.message ? '请输入至少 6 位的密码' : ''
+                  ))
+                } else {
+                  callback('注册成功！请查收邮件。')
+                }
+              } else {
+                callback('注册失败！')
+              }
+            }
+          }
+          req2.send(formdata)
+        } else {
+          callback('注册失败')
+        }
+      }
+    }
+    req.send()
+  }
+
   public static requestStallAPI(apiname: string, data: any, callback: (data: any) => any,
                                 errorCallback: (error: number, message: string) => any) {
     let url = 'https://www.getdaze.org/stall/api/' + apiname + '/'
     if (!data) {
       data = {}
     }
-    data.pmo = 'pmo2017'
+    data.pmo = 'pmo2018'
     url += '?' + Object.keys(data)
       .map(key => key + '=' + encodeURIComponent(data[key]))
       .join('&')

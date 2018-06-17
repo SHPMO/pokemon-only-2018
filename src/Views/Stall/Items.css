@@ -1,0 +1,39 @@
+.item-list {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item-display {
+    font-size: 1rem;
+    width: 40%;
+    margin: 2rem auto;
+    display: flex;
+    white-space: pre-line;
+}
+
+.item-left {
+    flex: 0 1 auto;
+    width: 9rem;
+    height: 9rem;
+}
+
+.item-cover {
+    display: block;
+    margin: auto;
+    background: center no-repeat;
+    background-size: contain;
+    border: solid #2d5175 2px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.item-right {
+    flex: 1 1 auto;
+    width: 0;
+    margin-left: 0.5rem;
+    overflow-wrap: normal;
+    overflow: hidden;
+}

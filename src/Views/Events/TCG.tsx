@@ -7,7 +7,7 @@ import './TCG.css'
 
 class TCG extends Component {
   public componentDidMount() {
-    document.title = '卡牌体验专区 - 现场活动 - 彩虹火箭队基地'
+    document.title = 'TCG - 现场活动 - 彩虹火箭队基地'
     Utils.setAppClass('app-tcg')
   }
 

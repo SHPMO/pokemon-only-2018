@@ -6,8 +6,15 @@
 
 .seller-display {
     display: block;
-    width: 20%;
-    margin: 1rem 1rem;
+    width: 45%;
+    margin: 1rem auto 1rem 1rem;
+}
+
+@media (min-width: 1280px) {
+    .seller-display {
+        width: 20%;
+        margin: 1rem 0 1rem 2rem;
+    }
 }
 
 .seller-cover {
@@ -22,4 +29,5 @@
 .seller-title {
     text-align: center;
     margin-top: 0.25rem;
+    font-size: 1.3rem;
 }

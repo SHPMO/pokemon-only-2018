@@ -3,18 +3,21 @@ import {Component} from 'react'
 import {RouteComponentProps, withRouter} from 'react-router'
 import API from '../../lib/API'
 
+import Items from './Items'
+
 import './Seller.css'
 
 class SellerView extends Component<RouteComponentProps<{ sellerId: string }> & { onUpdate: () => any }, { seller: any }> {
   constructor(props: RouteComponentProps<{ sellerId: string }> & { onUpdate: () => any }) {
     super(props)
     this.state = {
-      seller: {}
+      seller: null
     }
   }
 
   public componentDidMount() {
-    API.getSeller(this.props.match.params.sellerId, false, seller => {
+    API.getSeller(this.props.match.params.sellerId, false, (seller: Seller) => {
+      document.title = seller.circle_name + ' - 摊位一览 - 现场摊位 - 彩虹火箭队基地'
       this.setState({
         seller
       })
@@ -40,10 +43,11 @@ class SellerView extends Component<RouteComponentProps<{ sellerId: string }> & {
           <div className="seller-number">摊位号：{seller.seller_id ? seller.seller_id : '未定'}</div>
         </div>
         <div className="seller-detail-right">
-          <div className="seller-title">{seller.circle_name}</div>
+          <div className="seller-detail-title">{seller.circle_name}</div>
           <div className="seller-description">{seller.circle_description}</div>
         </div>
       </div>
+      <Items onUpdate={this.props.onUpdate} seller_id={seller.id.toString()}/>
     </div>) : <h1>暂无摊位信息</h1>
   }
 }

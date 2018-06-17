@@ -15,7 +15,7 @@ type Item = {
   forto: string,
   introduction: string,
   is_restricted: string,
-  is_started_with: string,
+  is_started_with: boolean,
   item_id: string,
   item_pictures: string[],
   item_type: string,
