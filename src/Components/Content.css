@@ -1,6 +1,7 @@
 .content {
     display: flex;
     flex-direction: column;
+    padding-bottom: 2rem;
 }
 
 .content-title {
@@ -38,6 +39,7 @@
     width: 2.6rem;
     height: 2.6rem;
     margin: auto;
+    padding-top: 0.1rem;
 }
 
 .content-container {
@@ -45,6 +47,14 @@
     overflow: hidden;
     height: 100%;
     display: flex;
+}
+
+.content-container-left {
+    flex-direction: row;
+}
+
+.content-container-right {
+    flex-direction: row-reverse;
 }
 
 .content-scrollbar {
@@ -83,15 +93,43 @@
     }
 }
 
+.content-no-scrollbar .content-content {
+    padding-left: 4rem;
+    padding-right: 16rem;
+}
+
 .content-content {
     height: 100%;
     overflow-y: scroll;
-    margin-right: -50px;
-    padding-right: 50px;
+    margin-right: -12rem;
+    padding-right: 12rem;
     font-size: 1.5rem;
     flex: 1 1 auto;
 }
 
+.content-container-right .content-content {
+    padding-left: 5rem;
+}
+
+@media (min-width: 1280px) {
+    .content-container-right .content-content {
+        padding-left: 12rem;
+    }
+}
+
+.content-content h1 {
+    font-size: 1.6em;
+}
+
 .content-content h2 {
-    font-size: 1.8rem;
+    font-size: 1.2em;
+}
+
+.content-content a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.content-content-noselect {
+    user-select: none;
 }

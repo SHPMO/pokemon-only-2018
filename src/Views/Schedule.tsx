@@ -13,9 +13,8 @@ class Schedule extends Component {
 
   public render() {
     return (<div className="schedule-container">
-      <Content className="schedule-content" onLeft={true} contentTitle={(() => {
-        return (<span>活动<strong>时间</strong>与当日<strong>行程</strong></span>)
-      })()}>
+      <Content className="schedule-content" onLeft={true}
+               contentTitle={<span>活动<strong>时间</strong>与当日<strong>行程</strong></span>}>
         <Content.Header>基本<br/>信息</Content.Header>
         <h2>彩虹！彩虹色的明天在等待！</h2>
         <table className="schedule-table">

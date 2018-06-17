@@ -30,10 +30,10 @@ class Home extends Component {
       <div className="home-navs">
         <Link to="/schedule">当日行程</Link>
         <Link to="/place">场地信息</Link>
-        <Link to="/ticket">票务信息</Link>
         <Link to="/prize">奖品一览</Link>
-        <Link to="/stalls">现场摊位</Link>
+        <Link to="/ticket">票务信息</Link>
         <Link to="/events">现场活动</Link>
+        <Link to="/stalls">现场摊位</Link>
       </div>
     </div>)
   }

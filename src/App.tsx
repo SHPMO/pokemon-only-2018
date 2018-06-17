@@ -1,11 +1,21 @@
 import * as React from 'react'
-import {HashRouter, Link, Route, Switch} from 'react-router-dom'
+import {HashRouter, Route, Switch} from 'react-router-dom'
 
 import './App.css'
-import logo from './Images/logo.png'
+import Header from './Components/Header'
 import Utils from './lib/Utils'
+import Battle from './Views/Events/Battle'
+import Events from './Views/Events/Events'
+import Lottery from './Views/Events/Lottery'
+import Stage from './Views/Events/Stage'
+import TCG from './Views/Events/TCG'
+import Venue from './Views/Events/Venue'
 import Home from './Views/Home'
+import Place from './Views/Place'
+import Prize from './Views/Prize'
 import Schedule from './Views/Schedule'
+import Stalls from './Views/Stalls/Stalls'
+import Ticket from './Views/Ticket'
 
 
 class App extends React.Component<any, { appClass: string, landscape: boolean }> {
@@ -34,12 +44,20 @@ class App extends React.Component<any, { appClass: string, landscape: boolean }>
         <div
           className={'App ' + this.state.appClass + ' App-background-' +
           (this.state.landscape ? 'landscape' : 'portrait')}>
-          <header className="App-header">
-            <Link to="/"><img src={logo} className="App-logo" alt="logo"/></Link>
-          </header>
+          <Header/>
           <Switch>
             <Route exact={true} path="/" name="Home" component={Home}/>
             <Route exact={true} path="/schedule" name="Schedule" component={Schedule}/>
+            <Route exact={true} path="/place" name="Place" component={Place}/>
+            <Route exact={true} path="/prize" name="Prize" component={Prize}/>
+            <Route exact={true} path="/ticket" name="Ticket" component={Ticket}/>
+            <Route exact={true} path="/events" name="Events" component={Events}/>
+            <Route exact={true} path="/events/battle" name="Battle" component={Battle}/>
+            <Route exact={true} path="/events/venue" name="Venue" component={Venue}/>
+            <Route exact={true} path="/events/stage" name="Stage" component={Stage}/>
+            <Route exact={true} path="/events/tcg" name="TCG" component={TCG}/>
+            <Route exact={true} path="/events/lottery" name="Lottery" component={Lottery}/>
+            <Route exact={true} path="/stalls" name="Stalls" component={Stalls}/>
           </Switch>
         </div>
       </HashRouter>

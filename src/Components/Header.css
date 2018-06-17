@@ -1,0 +1,70 @@
+.App-logo {
+    height: 50px;
+    margin: auto;
+}
+
+.App-header {
+    z-index: 5;
+    position: absolute;
+    display: flex;
+    margin-left: 10%;
+    width: 80%;
+    height: 55px;
+    color: white;
+    background: linear-gradient(to right,
+    rgba(34, 34, 34, 0), rgba(34, 34, 34, 0.9),
+    rgba(34, 34, 34, 1), rgba(34, 34, 34, 1), rgba(34, 34, 34, 1),
+    rgba(34, 34, 34, 0.9), rgba(34, 34, 34, 0));
+}
+
+.App-header > div {
+    text-align: center;
+    margin: auto;
+    display: flex;
+}
+
+.App-header-navs {
+    display: block;
+    margin: auto 1.6rem;
+    font-size: 16px;
+    width: 32px;
+    height: 32px;
+    border: solid 1px;
+    border-radius: 22px;
+    padding: 6px;
+    text-align: center;
+    line-height: 16px;
+    text-decoration: none;
+    color: #fefefe;
+}
+
+.App-header-logo {
+    margin: auto 1.9rem;
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .App-header {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .App-header-navs {
+        margin: auto 1.2rem;
+    }
+
+    .App-header-logo {
+        margin: auto 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .App-header-navs {
+        margin: auto 0.1rem;
+    }
+
+    .App-header-logo {
+        margin: auto 0.1rem;
+    }
+}
+

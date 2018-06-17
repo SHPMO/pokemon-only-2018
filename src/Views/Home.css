@@ -43,14 +43,6 @@
     line-height: 4rem;
 }
 
-/*.home-title-h2-inner:after {*/
-    /*content: "";*/
-    /*display: inline-block;*/
-    /*width: 100%;*/
-    /*height: 0;*/
-    /*overflow: hidden;*/
-/*}*/
-
 .home-news-button {
     display: inline-block;
     margin-top: 6rem;
