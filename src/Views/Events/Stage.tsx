@@ -7,6 +7,7 @@ import './Stage.css'
 
 class Stage extends Component {
   public componentDidMount() {
+    document.title = '舞台游戏 - 现场活动 - 彩虹火箭队基地'
     Utils.setAppClass('app-stage')
   }
 

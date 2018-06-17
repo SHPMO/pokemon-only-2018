@@ -8,6 +8,7 @@ import './Schedule.css'
 
 class Schedule extends Component {
   public componentDidMount() {
+    document.title = '活动时间与当日行程 - 彩虹火箭队基地'
     Utils.setAppClass('app-schedule')
   }
 

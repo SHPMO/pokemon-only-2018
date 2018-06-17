@@ -25,6 +25,7 @@
 
 .App-header-navs {
     display: block;
+    box-sizing: content-box;
     margin: auto 1.6rem;
     font-size: 16px;
     width: 32px;

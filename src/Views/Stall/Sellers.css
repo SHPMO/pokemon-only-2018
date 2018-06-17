@@ -1,0 +1,25 @@
+.seller-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.seller-display {
+    display: block;
+    width: 20%;
+    margin: 1rem 1rem;
+}
+
+.seller-cover {
+    padding-top: 100%;
+    border: solid #fefefe 2px;
+    background: no-repeat center;
+    background-size: contain;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.seller-title {
+    text-align: center;
+    margin-top: 0.25rem;
+}

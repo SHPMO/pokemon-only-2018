@@ -7,6 +7,7 @@ import './Place.css'
 
 class Place extends Component {
   public componentDidMount() {
+    document.title = '场地信息 - 彩虹火箭队基地'
     Utils.setAppClass('app-place')
   }
 

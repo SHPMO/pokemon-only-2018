@@ -7,6 +7,7 @@ import './Venue.css'
 
 class Venue extends Component {
   public componentDidMount() {
+    document.title = '场地活动 - 现场活动 - 彩虹火箭队基地'
     Utils.setAppClass('app-venue')
   }
 

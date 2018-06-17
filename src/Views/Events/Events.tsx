@@ -8,6 +8,7 @@ import './Events.css'
 
 class Events extends Component {
   public componentDidMount() {
+    document.title = '现场活动 - 彩虹火箭队基地'
     Utils.setAppClass('app-events')
   }
 

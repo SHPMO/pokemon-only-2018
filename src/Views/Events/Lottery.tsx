@@ -7,6 +7,7 @@ import './Lottery.css'
 
 class Lottery extends Component {
   public componentDidMount() {
+    document.title = '究极幸运大抽奖 - 现场活动 - 彩虹火箭队基地'
     Utils.setAppClass('app-lottery')
   }
 

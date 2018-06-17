@@ -9,12 +9,15 @@ import {
 } from 'react'
 import * as React from 'react'
 
+import Stall from '../Views/Stall/Stall'
+
 import './Content.css'
 
 type ContentProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLElement> & {
   onLeft: boolean,
   contentClassName?: string,
   contentTitle: JSX.Element,
+  parent?: any
 }
 
 type ContentState = {
@@ -228,6 +231,9 @@ class Content extends React.Component<ContentProps, ContentState> {
     this.onBarScrollStateEvent = this.onBarScrollState.bind(this)
     this.onBarWheelEvent = this.onBarWheel.bind(this)
     this.content = createRef()
+    if (this.props.parent) {
+      (this.props.parent as Stall).content = this
+    }
   }
 
   public componentDidMount() {
@@ -238,6 +244,20 @@ class Content extends React.Component<ContentProps, ContentState> {
   public componentWillUnmount() {
     window.removeEventListener('resize', this.onResize.bind(this))
   }
+
+  public onResize() {
+    if (this.content.current === null) {
+      return
+    }
+    const content = this.content.current as HTMLDivElement
+    const show = Math.abs(content.scrollHeight - content.offsetHeight) > 2
+    if (show !== this.state.showScrollbar) {
+      this.setState({
+        showScrollbar: show
+      })
+    }
+  }
+
 
   public render() {
     return (
@@ -261,19 +281,6 @@ class Content extends React.Component<ContentProps, ContentState> {
         </div>
       </div>
     )
-  }
-
-  private onResize() {
-    if (this.content.current === null) {
-      return
-    }
-    const content = this.content.current as HTMLDivElement
-    const show = Math.abs(content.scrollHeight - content.offsetHeight) > 2
-    if (show !== this.state.showScrollbar) {
-      this.setState({
-        showScrollbar: show
-      })
-    }
   }
 
   private onScroll(e: Event) {

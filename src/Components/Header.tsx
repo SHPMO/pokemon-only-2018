@@ -23,7 +23,7 @@ class Header extends Component<RouteComponentProps<any>> {
         {this.props.location.pathname === '/' ? [] : [
           <Link key={0} className="App-header-navs" to="/ticket">票务信息</Link>,
           <Link key={1} className="App-header-navs" to="/events">现场活动</Link>,
-          <Link key={2} className="App-header-navs" to="/stalls">现场摊位</Link>
+          <Link key={2} className="App-header-navs" to="/stall">现场摊位</Link>
         ]}
       </div>
     </header>)

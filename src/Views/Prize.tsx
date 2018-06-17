@@ -7,6 +7,7 @@ import './Prize.css'
 
 class Prize extends Component {
   public componentDidMount() {
+    document.title = '奖品一览 - 彩虹火箭队基地'
     Utils.setAppClass('app-prize')
   }
 

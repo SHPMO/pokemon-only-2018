@@ -1,9 +1,9 @@
-.app-stalls {
+.app-stall {
     background: url("../../Images/background.png") no-repeat no-repeat;
     background-position-x: center;
 }
 
-.stalls-container {
+.stall-container {
     width: 100%;
     padding-top: 55px;
     height: 100%;
@@ -13,7 +13,7 @@
     overflow: hidden;
 }
 
-.stalls-content {
+.stall-content {
     text-align: left;
     color: #fefefe;
     width: 90%;
@@ -28,12 +28,16 @@
 }
 
 @media (min-width: 1280px) {
-    .stalls-content {
+    .stall-content {
         width: 66%;
     }
 }
 
-.stalls-characters {
+.stall-content-content {
+    padding-left: 4rem !important;
+}
+
+.stall-characters {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -46,7 +50,7 @@
     z-index: 1;
 }
 
-.stalls-characters-2 {
+.stall-characters-2 {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -59,3 +63,12 @@
     z-index: 1;
 }
 
+.stall-navs {
+    margin-bottom: 3rem;
+    text-align: right;
+}
+
+.stall-navs > a {
+    display: inline-block;
+    margin-right: 3rem;
+}

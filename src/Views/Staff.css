@@ -1,0 +1,132 @@
+.app-staff {
+    background: url("../Images/background-staff.png") no-repeat no-repeat;
+    background-position-x: center;
+}
+
+.staff-container {
+    width: 100%;
+    color: #fefefe;
+}
+
+.staff-title {
+    display: inline-block;
+    text-align-last: justify;
+    margin: 5rem auto auto;
+}
+
+.staff-title > h1 {
+    letter-spacing: 0.2rem;
+    display: inline-block;
+    margin: 0;
+    font-size: 3.5rem;
+}
+
+.staff-title > div {
+    display: inline-block;
+    width: 100%;
+}
+
+.staff-title > div > h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.staff-teams {
+    width: 40%;
+    margin-top: 10rem;
+    margin-left: 5rem;
+    float: left;
+}
+
+.staff-team {
+    display: block;
+    position: relative;
+    text-align: left;
+    height: 2.5rem;
+    color: #fefefe;
+    margin-top: 2rem;
+}
+
+.staff-icon {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 0 0 2.5rem;
+    background: center no-repeat;
+    background-size: contain;
+}
+
+.staff-name {
+    margin: 0;
+    height: 2.5rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+    padding-left: 5rem;
+}
+
+.staff-icon-g1 {
+    background-image: url("../Images/icon-g1.png");
+}
+
+.staff-icon-g3 {
+    background-image: url("../Images/icon-g3.png");
+    margin-left: 0;
+}
+
+.staff-icon-g3-2 {
+    background-image: url("../Images/icon-g3-2.png");
+}
+
+.staff-icon-g4 {
+    background-image: url("../Images/icon-g4.png");
+}
+
+.staff-icon-g5 {
+    background-image: url("../Images/icon-g5.png");
+}
+
+.staff-icon-g6 {
+    background-image: url("../Images/icon-g6.png");
+}
+
+.staff-icon-g7 {
+    background-image: url("../Images/icon-g7.png");
+}
+
+.staff-icon-g7-2 {
+    background-image: url("../Images/icon-g7-2.png");
+}
+
+.staff-rules {
+    width: 45%;
+    float: right;
+    margin-top: 10rem;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+.staff-rules-inner {
+    display: inline-block;
+}
+
+.staff-rules-inner > div:nth-child(1) {
+    text-align-last: justify;
+}
+
+.staff-rules-inner > div {
+    height: 3.6rem;
+}
+
+.staff-rules strong {
+    font-size: 3.6rem;
+}
+
+@media (max-width: 1279px) {
+    .staff-teams, .staff-rules {
+        width: 90%;
+        float: none;
+        margin: 2rem auto 0;
+    }
+}

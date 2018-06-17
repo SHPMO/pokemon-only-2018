@@ -8,6 +8,7 @@ import './Home.css'
 class Home extends Component {
 
   public componentDidMount() {
+    document.title = '首页 - 彩虹火箭队基地'
     Utils.setAppClass('app-home')
   }
 
@@ -33,7 +34,10 @@ class Home extends Component {
         <Link to="/prize">奖品一览</Link>
         <Link to="/ticket">票务信息</Link>
         <Link to="/events">现场活动</Link>
-        <Link to="/stalls">现场摊位</Link>
+        <Link to="/stall">现场摊位</Link>
+      </div>
+      <div className="home-staff">
+        <Link to="/staff">反 派 大 合 集</Link>
       </div>
     </div>)
   }

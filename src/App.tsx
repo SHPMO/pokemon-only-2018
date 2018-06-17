@@ -14,7 +14,8 @@ import Home from './Views/Home'
 import Place from './Views/Place'
 import Prize from './Views/Prize'
 import Schedule from './Views/Schedule'
-import Stalls from './Views/Stalls/Stalls'
+import Staff from './Views/Staff'
+import Stall from './Views/Stall/Stall'
 import Ticket from './Views/Ticket'
 
 
@@ -57,7 +58,8 @@ class App extends React.Component<any, { appClass: string, landscape: boolean }>
             <Route exact={true} path="/events/stage" name="Stage" component={Stage}/>
             <Route exact={true} path="/events/tcg" name="TCG" component={TCG}/>
             <Route exact={true} path="/events/lottery" name="Lottery" component={Lottery}/>
-            <Route exact={true} path="/stalls" name="Stalls" component={Stalls}/>
+            <Route path="/stall" name="Stall" component={Stall}/>
+            <Route exact={true} path="/staff" name="Staff" component={Staff}/>
           </Switch>
         </div>
       </HashRouter>

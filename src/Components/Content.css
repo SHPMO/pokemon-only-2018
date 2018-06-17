@@ -36,6 +36,7 @@
 }
 
 .content-header > div {
+    box-sizing: content-box;
     width: 2.6rem;
     height: 2.6rem;
     margin: auto;

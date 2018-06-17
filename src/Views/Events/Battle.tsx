@@ -8,13 +8,14 @@ import './Battle.css'
 
 class Battle extends Component {
   public componentDidMount() {
+    document.title = '联机对战 - 现场活动 - 彩虹火箭队基地'
     Utils.setAppClass('app-battle')
   }
 
   public render() {
     return (<div className="battle-container">
       <Content className="battle-content" contentClassName="battle-content-content" onLeft={false}
-               contentTitle={<span>现场<br/><strong>活动</strong></span>}>
+               contentTitle={<span><strong>联机</strong><br/>对战</span>}>
         <h1>【参赛方式】</h1>
         <p>**本次比赛全程不设参赛费<br/>
           **参与现场赛需要通过预选赛获得参赛权，具体参照后详</p>

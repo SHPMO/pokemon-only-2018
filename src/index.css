@@ -2,6 +2,11 @@
     font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
 }
 
+a:hover {
+    color: #4ececb;
+    text-decoration: none;
+}
+
 html {
     height: 100%;
     font-size: 10px;

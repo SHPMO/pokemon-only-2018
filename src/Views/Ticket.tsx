@@ -7,6 +7,7 @@ import './Ticket.css'
 
 class Ticket extends Component {
   public componentDidMount() {
+    document.title = '票务信息 - 彩虹火箭队基地'
     Utils.setAppClass('app-ticket')
   }
 
@@ -44,9 +45,6 @@ class Ticket extends Component {
               （仅网络预售 81.8r，每个 WWID 最多可拍付 3 份）
             </div>
           </div>
-          <h2>*入场门票相关</h2>
-          <p>入场门票 = 磁卡*1 + 磁卡背纸*1 + 信封*1<br/>
-            入场需要由骷髅队队员确认腕带是否戴好后，自行刷磁卡入场。</p>
           <h2>*二次入场相关</h2>
           <p>本届所有入场票可反复进出场（9:00 ~ 10:30不可出场）。<br/>
             请所有训练家务必戴上彩虹火箭队提供的一次性腕带，手腕上没有腕带的训练家将不被允许进入基地。<br/>
@@ -65,7 +63,7 @@ class Ticket extends Component {
             （持有 VIP 入场票或第一届魔都 PMO VIP 特典硬卡的参赛选手可在 8 月上旬在魔都 PMO 对战咨询群中与主办方进行沟通）</p>
           <h1>购买方式</h1>
           <p>【线上预售】6月24日晚20:00起至8月4日晚23:59<br/>
-            <a href="https://www.taobao.com" target="_blank">魔都 PMO 官方淘宝店 - 魔都 PMO 2018 入场票（全4种）</a></p>
+            <a href="https://item.taobao.com/item.htm?id=571639427028" target="_blank">魔都 PMO 官方淘宝店 - 魔都 PMO 2018 入场票（全4种）</a></p>
           <p>【线下预售】6月23日卡店开店起 至8月12日卡店打烊<br/>
             实体店名：JE 集换式卡牌商店<br/>
             地址：<a href="http://f.amap.com/3RoGb_0354YPR" target="_blank">上海市黄浦区广西北路 256-258 号百米香榭 212 室</a>
@@ -79,7 +77,7 @@ class Ticket extends Component {
                  contentTitle={<span>点此<br/><strong>购票</strong></span>}>
           <div>【线上预售】</div>
           <div className="ticket-purchase-link">
-            <a href="https://www.taobao.com" target="_blank">魔都 PMO 官方淘宝店</a>
+            <a href="https://item.taobao.com/item.htm?id=571639427028" target="_blank">魔都 PMO 官方淘宝店</a>
           </div>
           <div>【线下预售】</div>
           <div className="ticket-purchase-link">

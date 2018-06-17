@@ -1,0 +1,46 @@
+.seller-content {
+    width: 100%;
+}
+
+.seller-detail {
+    width: 100%;
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.seller-detail-left {
+    width: 35%;
+    margin: 0 5rem;
+}
+
+.seller-detail-right {
+    width: 50%;
+    margin: 0 auto;
+    padding-right: 16px;
+    white-space: pre-line;
+}
+
+.seller-cover {
+    display: block;
+    padding-top: calc(100% - 4px);
+    margin: auto;
+    background: no-repeat center;
+    background-size: contain;
+    border: solid #fefefe 2px;
+}
+
+.seller-number {
+    text-align: center;
+    margin-top: 5px;
+    height: 1em;
+}
+
+.seller-title {
+    font-size: 1.5em;
+}
+
+@media (max-width: 1016px) {
+    .seller-detail-right {
+        padding-right: 0;
+    }
+}
