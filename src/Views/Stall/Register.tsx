@@ -65,6 +65,7 @@ class Register extends Component<any, {
         <input required={true} onChange={this.setInput('passwordAgain')} value={this.state.passwordAgain}
                type="password" className="register-input" placeholder="确认密码"/>
         <button className="register-button">注册</button>
+        <a className="register-link" href="https://www.getdaze.org/dashboard/register/">已注册？点这里登录。</a>
       </form>
     </div>)
   }

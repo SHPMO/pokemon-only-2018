@@ -31,6 +31,7 @@ class App extends React.Component<any, { appClass: string, landscape: boolean }>
     window.onresize = () => {
       this.setState({landscape: window.innerWidth / window.innerHeight >= 16 / 9})
     }
+    document.title = '彩虹火箭队基地'
   }
 
   public setClass(name: string) {
