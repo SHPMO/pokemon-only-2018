@@ -3,6 +3,7 @@ import {Component} from 'react'
 import {Link} from 'react-router-dom'
 
 import API from '../../lib/API'
+import Utils from '../../lib/Utils'
 
 import './Items.css'
 
@@ -36,15 +37,21 @@ class Items extends Component<{ onUpdate: () => any, seller_id?: string }, { ite
 
   public render() {
     const itemIds = Object.keys(this.state.items)
+    if (itemIds.length % 2 === 1) {
+      itemIds.push('')
+    }
     return (<div>
       <div className="item-list">
         {itemIds.length > 0 ? itemIds.map((itemId, i: number) => {
+          if (itemId === '') {
+            return <div key={i} className="item-display"/>
+          }
           const item = this.state.items[itemId] as Item
           const url = '/stall/items/' + itemId
           return (<div key={i} className="item-display">
             <div className="item-left">
               <Link to={url} className="item-cover"
-                    style={{backgroundImage: 'url(https://www.getdaze.org' + item.cover_image + ')'}}/>
+                    style={{backgroundImage: Utils.getBackgroundImage(item.cover_image)}}/>
             </div>
             <div className="item-right">
               <Link to={url} className="item-name">{item.name}</Link>

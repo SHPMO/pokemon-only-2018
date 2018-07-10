@@ -2,6 +2,7 @@ import * as React from 'react'
 import {Component} from 'react'
 import {RouteComponentProps, withRouter} from 'react-router'
 import API from '../../lib/API'
+import Utils from '../../lib/Utils'
 
 import Items from './Items'
 
@@ -39,7 +40,7 @@ class SellerView extends Component<RouteComponentProps<{ sellerId: string }> & {
       <div className="seller-detail">
         <div className="seller-detail-left">
           <div className="seller-cover"
-               style={{backgroundImage: 'url(https://www.getdaze.org' + seller.circle_image + ')'}}/>
+               style={{backgroundImage: Utils.getBackgroundImage(seller.circle_image)}}/>
           <div className="seller-number">摊位号：{seller.seller_id ? seller.seller_id : '未定'}</div>
         </div>
         <div className="seller-detail-right">

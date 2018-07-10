@@ -3,6 +3,7 @@ import {Component} from 'react'
 import {RouteComponentProps, withRouter} from 'react-router'
 import {Link} from 'react-router-dom'
 import API from '../../lib/API'
+import Utils from '../../lib/Utils'
 
 import './Item.css'
 
@@ -66,7 +67,7 @@ class ItemView extends Component<RouteComponentProps<{ itemId: string }> & { onU
     return item !== null ? (<div className="item-content">
         <div id="item-metas">
           <div id="item-meta-left" className="item-meta">
-            <div id="item-cover" style={{backgroundImage: 'url(https://www.getdaze.org' + item.cover_image + ')'}}/>
+            <div id="item-cover" style={{backgroundImage: Utils.getBackgroundImage(item.cover_image)}}/>
           </div>
           <div id="item-meta-right" className="item-meta">
             <div id="item-name">{item.name}</div>
@@ -114,14 +115,14 @@ class ItemView extends Component<RouteComponentProps<{ itemId: string }> & { onU
           <div>
             {item.item_pictures.map((x, i) =>
               <div key={i} className="item-image-thumb" onClick={this.showImage(x)}>
-                <div style={{backgroundImage: 'url(https://www.getdaze.org' + x + ')'}}/>
+                <div style={{backgroundImage: Utils.getBackgroundImage(x)}}/>
               </div>
             )}
           </div>
         </div>
         {this.state.preview !== null ?
           <div className="image-preview" style={{
-            backgroundImage: 'url(https://www.getdaze.org' + this.state.preview + ')'
+            backgroundImage: Utils.getBackgroundImage(this.state.preview)
           }} onClick={this.hideImage()}/> : []}
       </div>
     ) : <h1>暂无商品信息</h1>
