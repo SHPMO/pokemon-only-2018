@@ -11,10 +11,7 @@ class Utils {
   }
 
   public static getBackgroundImage(url: string | null) {
-    if (!url) {
-      return icon
-    }
-    return 'url(https://www.getdaze.org' + url + ')'
+    return `url(${url ? ('https://www.getdaze.org' + url) : icon})`
   }
 
   private static app: App

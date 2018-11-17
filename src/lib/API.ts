@@ -19,7 +19,7 @@ class API {
   public static getItems(sellerId: string | null, force: boolean,
                          callback: (sellers: any) => any, errorCallback: (error: number, message: string) => any) {
     if (!force) {
-      if (sellerId === null && Cache.itemFetched) {
+      if (sellerId === null && Cache.itemsFetched) {
         callback(Cache.items)
         return
       } else if (sellerId !== null && sellerId in Cache.itemSellers) {
@@ -39,7 +39,7 @@ class API {
         Cache.items[each] = items[each]
       }
       if (data === null) {
-        Cache.itemFetched = true
+        Cache.itemsFetched = true
       } else {
         Cache.itemSellers[data.seller_id] = Object.keys(items)
       }
@@ -61,12 +61,13 @@ class API {
 
   public static getSellers(force: boolean,
                            callback: (sellers: any) => any, errorCallback: (error: number, message: string) => any) {
-    if (!force && Object.keys(Cache.sellers).length > 0) {
+    if (!force && Cache.sellersFetched){
       callback(Cache.sellers)
       return
     }
     API.requestStallAPI('get_seller', null, sellers => {
       Cache.sellers = sellers
+      Cache.sellersFetched = true;
       callback(sellers)
     }, errorCallback)
   }

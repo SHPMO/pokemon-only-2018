@@ -1,14 +1,16 @@
 /* tslint:disable */
 class Cache {
   public sellers: any
+  public sellersFetched: boolean
   public items: any
-  public itemFetched: boolean
+  public itemsFetched: boolean
   public itemSellers: any
 
   constructor() {
     this.sellers = {}
+    this.sellersFetched = false
     this.items = {}
-    this.itemFetched = false
+    this.itemsFetched = false
     this.itemSellers = {}
   }
 }
